@@ -9,7 +9,22 @@ namespace StayWell.ServiceDefinitions.Content
     [ServiceContract(Name = "Content", Namespace = "http://www.kramesstaywell.com")]
     public interface IPublicContentService
 	{
+		#region Updates
+
+		/// <summary>
+		/// Get modifications
+		/// </summary>
+		/// <param name="startTime">Start time in yyyy-mm-ddThh:mm:ss.fffffffZ format</param>
+		/// <returns></returns>
+		[WebInvoke(UriTemplate = "Modifications", Method = "GET")]
+		[OperationContract]
+		[Allow(ClientType = ClientType.Internal, Rights = "Read_Content")]
+		ContentModifications GetContentModifications(string startTime);
+
+		#endregion
+
 		#region Articles
+
 		[WebInvoke(UriTemplate = "", Method = "GET")]
         [OperationContract]
         [Allow(ClientType = ClientType.Internal, Rights = "Read_Content", SpecialAccess = AllowedSpecialAccess.Jsonp)]

@@ -96,6 +96,8 @@
     <Compile Include="Content\Objects\ContentHistoryResponse.cs" />
     <Compile Include="Content\Objects\ContentList.cs" />
     <Compile Include="Content\Objects\ContentMetadataResponse.cs" />
+    <Compile Include="Content\Objects\ContentModificationItem.cs" />
+    <Compile Include="Content\Objects\ContentModifications.cs" />
     <Compile Include="Content\Objects\ContentOriginType.cs" />
     <Compile Include="Content\Objects\ContentRatingResponse.cs" />
     <Compile Include="Content\Objects\ContentResponse.cs" />
